@@ -5,7 +5,7 @@ def conScan(tgtHost, tgtPort): #defining function conScan with 2 arguments (targ
     try:
         connskt = socket(AF_INET, SOCK_STREAM) # connskt creates a new TCP socket - AF_INET specifies IPv4/SOCK_STREAM indicates it's TCP connection
         connskt.connect((tgtHost, tgtPort))# Tries to connect to target host at selected port, takes tuple of (host, port) as argument.
-        print('[+]%d/tcp open'% tgtPort)# Prints# target port is open if connection is successful
+        print('[+]%d/tcp open'% tgtPort)# Prints target port is open if connection is successful
     except:
         print('[-]%d/tcp closed'% tgtPort)# If connection is not succesful tells you target port is closed. 
 
